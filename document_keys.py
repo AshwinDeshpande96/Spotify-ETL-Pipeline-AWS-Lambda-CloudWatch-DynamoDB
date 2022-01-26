@@ -1,0 +1,93 @@
+### PLAYLISTS SCHEMA
+PLAYLIST_ID = 'playlist_uri'
+PLAYLIST_TRACKS = 'playlist_tracks'
+PLAYLIST_URL = 'playlist_url'
+### SPOTIFY KEYS
+## Track
+SPOTIFY_TRACK_ID = 'id'
+SPOTIFY_ITEMS = 'items'
+SPOTIFY_TRACK = 'track'
+SPOTIFY_TRACK_ARTISTS = 'artists'
+SPOTIFY_TRACK_NAME = 'name'
+SPOTIFY_DURATION = 'duration_ms'
+SPOTIFY_POPULARITY = 'popularity'
+SPOTIFY_TRACK_URI = 'uri'
+SPOTIFY_TRACK_KEYS = [
+    SPOTIFY_TRACK_ID,
+    SPOTIFY_TRACK_NAME,
+    SPOTIFY_DURATION,
+    SPOTIFY_POPULARITY,
+    SPOTIFY_TRACK_URI
+]
+## Album
+SPOTIFY_ALBUM = 'album'
+SPOTIFY_ALBUM_ARTISTS = 'artists'
+SPOTIFY_ALBUM_URL = 'href'
+SPOTIFY_ALBUM_ID = 'id'
+SPOTIFY_ALBUM_NAME = 'name'
+SPOTIFY_ALBUM_DATE = 'release_date'
+SPOTIFY_ALBUM_NUM_TRACKS = 'total_tracks'
+SPOTIFY_ALBUM_URI = 'uri'
+SPOTIFY_ALBUM_KEYS = [
+    SPOTIFY_ALBUM_URL,
+    SPOTIFY_ALBUM_ID,
+    SPOTIFY_ALBUM_NAME,
+    SPOTIFY_ALBUM_DATE,
+    SPOTIFY_ALBUM_NUM_TRACKS,
+    SPOTIFY_ALBUM_URI
+]
+## Artist
+SPOTIFY_ARTIST_ID = 'id'
+SPOTIFY_ARTIST_NAME = 'name'
+SPOTIFY_ARTIST_URL = 'href'
+SPOTIFY_ARTIST_URI = 'uri'
+SPOTIFY_ARTIST_KEYS = [
+    SPOTIFY_ARTIST_ID,
+    SPOTIFY_ARTIST_NAME,
+    SPOTIFY_ARTIST_URL,
+    SPOTIFY_ARTIST_URI
+]
+### TRACKS SCHEMA
+TRACK_ID = 'track_id'
+TRACK_NAME = 'track_name'
+TRACK_ALBUM = 'track_album'
+TRACK_DURATION = 'track_duration'
+TRACK_POPULARITY = 'track_popularity'
+TRACK_URI = 'track_uri'
+TRACK_KEYS = [
+    TRACK_ID,
+    TRACK_NAME,
+    TRACK_DURATION,
+    TRACK_POPULARITY,
+    TRACK_URI
+]
+TRACK_ARTISTS = 'track_artists'
+
+### ALBUMS SCHEMA
+ALBUM_ARTISTS = 'album_artists'
+ALBUM_URL = 'album_url'
+ALBUM_ID = 'album_id'
+ALBUM_NAME = 'album_name'
+ALBUM_DATE = 'album_release_date'
+ALBUM_NUM_TRACKS = 'album_num_tracks'
+ALBUM_URI = 'album_uri'
+ALBUM_KEYS = [
+    ALBUM_URL,
+    ALBUM_ID,
+    ALBUM_NAME,
+    ALBUM_DATE,
+    ALBUM_NUM_TRACKS,
+    ALBUM_URI
+]
+
+### ARTISTS SCHEMA
+ARTIST_ID = 'artist_id'
+ARTIST_NAME = 'artist_name'
+ARTIST_URL = 'artist_url'
+ARTIST_URI = 'artist_uri'
+ARTIST_KEYS = [
+    ARTIST_ID,
+    ARTIST_NAME,
+    ARTIST_URL,
+    ARTIST_URI
+]
