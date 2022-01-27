@@ -29,11 +29,12 @@ Spotipy python library is used to fetch data from Spotify API. API returns a JSO
  * Transform create DataCollection objects consisting of Playlist, Tracks, Album and Artist data
  * Load function connects to DynamoDB, run de-duplication and stores using boto3 library on AWS serverless DynamoDB.
 
- Code given in this repo is zipped an uploaded to the Lambda Function. Similarly, python library dependencies are zipped and added as a layer to the Lambda Function.
- An REST API Gateway is created such that an EC2 instance inside a secure VPC is given access to trigger the lambda event.
- Lambda Function has to given a role with Policy that give access to DynamoDB and CloudWatch(optional)-
+ Code given in this repo is zipped and uploaded to the Lambda Function. Similarly, python library dependencies are zipped and added as a layer to the Lambda Function.
+ A REST API Gateway is created such that an EC2 instance inside a secure VPC is given access to trigger the lambda event.
+ Lambda Function has to be given a role with Policies that give access to DynamoDB and CloudWatch(optional)-
  
  
 ## Dynamo DB
- ![Database Schema](https://github.com/AshwinDeshpande96/Spotify-ETL-Pipeline-AWS-Lambda-DynamoDB/blob/main/dynamo_db_Schema.png)
+ ![Database Schema](dynamo_db_Schema.png)
+ ![Database Screenshot](dynamoDBSS.png)
  The resulting tables are stored in [playlist_table](results/playlist_results.csv), [album_table](results/album_results.csv), [artist_table](results/artist_results.csv), [track_table](results/track_results.csv)
