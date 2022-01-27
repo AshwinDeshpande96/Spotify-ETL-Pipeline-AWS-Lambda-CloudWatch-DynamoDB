@@ -27,4 +27,4 @@ Spotipy python library is used to fetch data from Spotify API. API returns a JSO
  Since the Playlist URI is unique it is used as a unique Partition key 
  
 ## Dynamo DB
- ![Database Schema](https://github.com/AshwinDeshpande96/Spotify-ETL-Pipeline-AWS-Lambda-DynamoDB/blob/main/)
+ ![Database Schema](https://github.com/AshwinDeshpande96/Spotify-ETL-Pipeline-AWS-Lambda-DynamoDB/blob/main/dynamo_db_Schema.png)
