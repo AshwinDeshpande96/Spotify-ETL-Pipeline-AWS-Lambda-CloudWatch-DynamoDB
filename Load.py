@@ -41,18 +41,24 @@ class Load:
         return table
 
     def update_table(self, table, table_name, table_id):
-        response = self.DBHandler.dynamodb.batch_get_item(RequestItems={
-            table_name: {
-                "Keys": [{table_id: tid} for tid in table]
+        table_keys = list(table.keys())
+        responses = []
+        for i in range(0, len(table_keys), 50):
+            keychunk = table_keys[i:i + 50]
+            response = self.DBHandler.dynamodb.batch_get_item(RequestItems={
+                table_name: {
+                    "Keys": [{table_id: tid} for tid in keychunk]
+                }
             }
-        }
-        )
-        if table_name in response['Responses']:
-            for document in response['Responses'][table_name]:
-                db_id = document.get(table_id)
-                if db_id in table:
-                    document = self.merge(document, table[db_id])
-                    table[db_id] = document
+            )
+            responses.append(response)
+        for response in responses:
+            if table_name in response['Responses']:
+                for document in response['Responses'][table_name]:
+                    db_id = document.get(table_id)
+                    if db_id in table:
+                        document = self.merge(document, table[db_id])
+                        table[db_id] = document
         try:
             table = list(table.values())
             for i in range(0, len(table), 25):

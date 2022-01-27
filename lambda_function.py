@@ -8,6 +8,8 @@ from global_var import default_response
 
 
 def lambda_handler(event, context):
+    if not isinstance(event, dict):
+        return default_response
     if "queryStringParameters" in event and "playlist_id" in event["queryStringParameters"]:
         playlist_id = event["queryStringParameters"]["playlist_id"]
         uri = f"spotify:playlist:{playlist_id}"
