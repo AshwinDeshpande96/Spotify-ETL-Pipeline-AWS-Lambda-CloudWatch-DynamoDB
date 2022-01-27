@@ -7,7 +7,7 @@ There are 3 Main components of this Project:
 
 * In this project the trigger is scheduled event to start processing new data.
 * Trigger consists of three important components
-  * CRON Job to schedule the event on a loop. I chose to simply run the CRON Job every minute.
+  * CRON Job to schedule the event on a loop. This CRON command executes every minute.
     * \* \* \* \* \* python3 trigger.py playlists.csv
   * Python Script [trigger.py](https://github.com/AshwinDeshpande96/Spotify-ETL-Pipeline-AWS-Lambda-DynamoDB/blob/main/trigger/trigger.py). This loops through a csv that consists of a list of Playlist IDs
     * Each Playlist ID is stored along with 2 variable: **request_sent** a boolean and **response** a json string return by the lambda function.
@@ -29,8 +29,4 @@ Spotipy python library is used to fetch data from Spotify API. API returns a JSO
 ## Dynamo DB
  ![Database Schema](https://github.com/AshwinDeshpande96/Spotify-ETL-Pipeline-AWS-Lambda-DynamoDB/blob/main/dynamo_db_Schema.png)
  
- The resulting tables are stored in results/
- ```{r, echo=FALSE, warning=FALSE}
-library(flextable)
-flextable(read.csv("results\\playlist_results.csv"))
-```
+ The resulting tables are stored in [playlist_table](results/playlist_table.csv), [album_table](results/album_table.csv), [artist_table](results/artist_table.csv), [track_table](results/track_table.csv)
