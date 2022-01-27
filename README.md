@@ -28,3 +28,9 @@ Spotipy python library is used to fetch data from Spotify API. API returns a JSO
  
 ## Dynamo DB
  ![Database Schema](https://github.com/AshwinDeshpande96/Spotify-ETL-Pipeline-AWS-Lambda-DynamoDB/blob/main/dynamo_db_Schema.png)
+ 
+ The resulting tables are stored in results/
+ ```{r, echo=FALSE, warning=FALSE}
+library(flextable)
+flextable(read.csv("results\\playlist_results.csv"))
+```
