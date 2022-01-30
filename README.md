@@ -1,5 +1,5 @@
 # ETL Pipeline to Extract Song Data from Spotify
-ETL Pipeline that periodically triggers an AWS lambda function to extract playlist data transform to required schema and load it into No-SQL DynamoDB Database
+ETL Pipeline that extracts playlists data from Spotify and transforms to required schema in DynamoDB Database.
 
 The purpose of this project is to help understand how ETL pipelines are developed. The main focus is to gain knowledge about how different components are connected together.
 ![Arhcitecture](SpotifyArchitecture.jpg)
